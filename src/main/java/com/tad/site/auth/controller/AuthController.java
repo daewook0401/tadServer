@@ -1,5 +1,5 @@
-package com.tad.site.auth.controller;
+// package com.tad.site.auth.controller;
 
-public class AuthController {
+// public class AuthController {
 
-}
+// }

@@ -1,5 +1,5 @@
-package com.tad.site.auth.model.service;
+// package com.tad.site.auth.model.service;
 
-public interface AuthService {
+// public interface AuthService {
 
-}
+// }
