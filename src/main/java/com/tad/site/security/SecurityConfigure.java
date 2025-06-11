@@ -39,7 +39,7 @@ public class SecurityConfigure {
 				.cors(Customizer.withDefaults())
 				.authorizeHttpRequests(requests -> {
 					requests.requestMatchers("/api/admin/**").hasRole("ADMIN");
-					requests.requestMatchers(HttpMethod.POST).permitAll();
+					requests.requestMatchers(HttpMethod.POST, "/api/**").permitAll();
 					requests.requestMatchers(HttpMethod.GET, "/api/**").permitAll();
 					requests.requestMatchers(HttpMethod.POST).authenticated();
 					requests.requestMatchers(HttpMethod.PUT).authenticated();
@@ -53,7 +53,7 @@ public class SecurityConfigure {
 	@Bean
 	public CorsConfigurationSource corsConfigurationSource(){
 		CorsConfiguration configuration = new CorsConfiguration();
-		// configuration.setAllowedOrigins(Arrays.asList("192.168.219.**:**"));
+		configuration.setAllowedOrigins(Arrays.asList("localhost:**"));
 		configuration.setAllowedOriginPatterns(Arrays.asList("*"));
 		configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"));
 		configuration.setAllowedHeaders(Arrays.asList("Authorization", "Content-Type"));

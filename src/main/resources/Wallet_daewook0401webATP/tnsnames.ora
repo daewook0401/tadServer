@@ -1,0 +1,12 @@
+daewook0401webatp_high = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.ap-chuncheon-1.oraclecloud.com))(connect_data=(service_name=g17114e203e185f_daewook0401webatp_high.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
+
+daewook0401webatp_low = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.ap-chuncheon-1.oraclecloud.com))(connect_data=(service_name=g17114e203e185f_daewook0401webatp_low.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
+
+daewook0401webatp_medium = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.ap-chuncheon-1.oraclecloud.com))(connect_data=(service_name=g17114e203e185f_daewook0401webatp_medium.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
+
+daewook0401webatp_tp = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.ap-chuncheon-1.oraclecloud.com))(connect_data=(service_name=g17114e203e185f_daewook0401webatp_tp.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
+
+daewook0401webatp_tpurgent = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.ap-chuncheon-1.oraclecloud.com))(connect_data=(service_name=g17114e203e185f_daewook0401webatp_tpurgent.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
+
+
+

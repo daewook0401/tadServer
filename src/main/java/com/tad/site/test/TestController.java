@@ -11,7 +11,9 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.IntStream;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 
@@ -20,8 +22,18 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class TestController {
 
     @GetMapping("/users")
-    public ResponseWrapper<UserTestDto> getMethodName(@RequestParam(name = "param", required = false) String param) {
+    public ResponseEntity<ResponseWrapper<UserTestDto>> getMethodName(@RequestParam(name = "param", required = false) String param) {
         List<UserTestDto> users = IntStream.range(1, 6)
+                .mapToObj(i -> new UserTestDto((long) i, "User" + i, "user" + i + "@mail.com", LocalDate.now()))
+                .toList();
+        return ResponseEntity.ok(new ResponseWrapper<>(
+                new Header(0, "사용자 테스트 데이터입니다."),
+                new Body<>(users, users.size())
+        ));
+    }
+    @PostMapping("/users")
+    public ResponseWrapper<UserTestDto> getMethodName2() {
+        List<UserTestDto> users = IntStream.range(1, 12)
                 .mapToObj(i -> new UserTestDto((long) i, "User" + i, "user" + i + "@mail.com", LocalDate.now()))
                 .toList();
 
